@@ -44,21 +44,13 @@ public class ArrCharOps {
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        if (arr1 == null && arr2 == null) {
-            return true;
-            
-        }
-        if (arr1 == null || arr2 == null) {
-            return false;
-            
-        }
         if (arr1.length != arr2.length) {
             return false;
             
         }
         for (int i = 0; i < arr1.length; i++) {
             if (arr1[i] != arr2[i]) {
-                return false
+                return false;
                 
             }
         }
@@ -110,10 +102,10 @@ public class ArrCharOps {
     public static char[] concat(char[] arr1, char[] arr2) {
         char[] result = new char[arr1.length + arr2.length];
         for (int i = 0; i < arr1.length; i++) {
-            result[i] == arr1[i];
+            result[i] = arr1[i];
         }
         for (int i = 0; i < arr2.length; i++) {
-            result[arr1.length + 1] == arr2[i];
+            result[arr1.length + 1] = arr2[i];
         }
         return result;
     }
@@ -126,7 +118,7 @@ public class ArrCharOps {
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
         char[] sub = new char[endIndex - beginIndex];
         for (int i = beginIndex , j = 0; i < endIndex; i++ , j++) {
-            sub[j] == arr[i];
+            sub[j] = arr[i];
 
         }
         return sub;
