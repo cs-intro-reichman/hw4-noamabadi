@@ -105,7 +105,7 @@ public class ArrCharOps {
             result[i] = arr1[i];
         }
         for (int i = 0; i < arr2.length; i++) {
-            result[arr1.length + 1] = arr2[i];
+            result[arr1.length + i] = arr2[i];
         }
         return result;
     }
@@ -132,10 +132,10 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        if (arr.length == 0 || arr == null) {
+        if (arr.length == 0) {
             return 0;
         }
-        int n = 0;
+        int n = arr.length;
         long hash = 0;
         for (int i = 0; i < n; i++) {
             long power7 = (long) Math.pow(7, n - 1 - i);
